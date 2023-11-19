@@ -35,7 +35,7 @@ plt.title('Efficient Frontier', fontsize=24)
 single_asset_std=np.sqrt(np.diagonal(cov_quarterly))
 plt.scatter(single_asset_std,expected_returns,marker='X',color='red',s=200)
 
-# All 10
+# Efficient frontier with all ten stocks
 all_ten_EF = pd.read_csv('all_ten.csv')
 plt.plot(all_ten_EF['Risks'], all_ten_EF['Returns'], 'g-o')
 
