@@ -28,10 +28,11 @@ plt.title('Efficient Frontier', fontsize=24)
 single_asset_std=np.sqrt(np.diagonal(cov_quarterly))
 plt.scatter(single_asset_std,expected_returns,marker='X',color='red',s=200)
 
-# Compare new dataset to original from script1
+# Compare new efficient frontier with original from script1
 weak_EF = pd.read_csv('weak_risks_returns.csv')
 plt.plot(weak_EF['Risks'], weak_EF['Returns'], 'g-o')
 
+# Efficient frontier with General Electric and Chesapeake Energy stocks removed (they have the lowest expected return)
 strong_EF = pd.read_csv('strong_risks_returns.csv')
 plt.plot(strong_EF['Risks'], strong_EF['Returns'], 'k-x')
 
